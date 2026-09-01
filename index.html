@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ateliê da Família</title>
+
+    <meta name="description" content="Peças artesanais feitas com carinho e delicadeza.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-symbol">✦</span>
+            <span class="logo-name">Ateliê da Família</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="menu-button" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- MENU MOBILE -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#inicio" onclick="closeMenu()">Início</a>
+        <a href="#catalogo" onclick="closeMenu()">Catálogo</a>
+        <a href="#sobre" onclick="closeMenu()">Sobre</a>
+        <a href="#contato" onclick="closeMenu()">Contato</a>
+
+    </div>
+
+
+    <!-- INÍCIO -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">FEITO À MÃO • COM CARINHO</p>
+
+                <h1>
+                    Detalhes que tornam
+                    <span>cada momento especial.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Peças artesanais feitas com cuidado, delicadeza
+                    e muito carinho para deixar sua casa ainda mais bonita.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#catalogo" class="button primary">
+                        Ver catálogo
+                    </a>
+
+                    <a href="#contato" class="button secondary">
+                        Falar conosco
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+
+                <div class="hero-card">
+
+                    <div class="fabric-placeholder">
+                        <span>Foto da coleção</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGO -->
+
+        <section class="catalog" id="catalogo">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">NOSSO CATÁLOGO</p>
+
+                <h2>
+                    Peças feitas para você
+                </h2>
+
+                <p>
+                    Escolha uma peça que chamou sua atenção
+                    e entre em contato para saber mais.
+                </p>
+
+            </div>
+
+
+            <div class="categories">
+
+                <button class="category active">
+                    Todos
+                </button>
+
+                <button class="category">
+                    Guardanapos
+                </button>
+
+                <button class="category">
+                    Jogos americanos
+                </button>
+
+                <button class="category">
+                    Outros
+                </button>
+
+            </div>
+
+
+            <div class="products">
+
+
+                <!-- PRODUTO 1 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            Foto do produto
+                        </div>
+
+                        <span class="product-tag">
+                            Destaque
+                        </span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Guardanapos
+                        </p>
+
+                        <h3>
+                            Guardanapo Floral
+                        </h3>
+
+                        <p class="product-description">
+                            Guardanapo de tecido com estampa floral
+                            delicada, perfeito para compor mesas especiais.
+                        </p>
+
+                        <button
+                            class="interest-button"
+                            onclick="interest('Guardanapo Floral')">
+
+                            Tenho interesse
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 2 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <div class="image-placeholder">
+                            Foto do produto
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Guardanapos
+                        </p>
+
+                        <h3>
+                            Guardanapo Xadrez
+                        </h3>
+
+                        <p class="product-description">
+                            Modelo clássico e delicado para deixar
+                            a mesa charmosa em qualquer ocasião.
+                        </p>
+
+                        <button
+                            class="interest-button"
+                            onclick="interest('Guardanapo Xadrez')">
+
+                            Tenho interesse
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 3 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <div class="image-placeholder">
+                            Foto do produto
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Jogos americanos
+                        </p>
+
+                        <h3>
+                            Jogo Americano Natural
+                        </h3>
+
+                        <p class="product-description">
+                            Uma peça elegante e versátil para
+                            compor sua mesa de forma aconchegante.
+                        </p>
+
+                        <button
+                            class="interest-button"
+                            onclick="interest('Jogo Americano Natural')">
+
+                            Tenho interesse
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 4 -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <div class="image-placeholder">
+                            Foto do produto
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-category">
+                            Outros
+                        </p>
+
+                        <h3>
+                            Peça Artesanal
+                        </h3>
+
+                        <p class="product-description">
+                            Produzida artesanalmente com atenção
+                            aos pequenos detalhes.
+                        </p>
+
+                        <button
+                            class="interest-button"
+                            onclick="interest('Peça Artesanal')">
+
+                            Tenho interesse
+
+                            <span>→</span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section class="about" id="sobre">
+
+            <div class="about-decoration">
+
+                <div class="about-circle">
+                    ✦
+                </div>
+
+            </div>
+
+            <div class="about-content">
+
+                <p class="eyebrow">
+                    SOBRE O ATELIÊ
+                </p>
+
+                <h2>
+                    Feito com as mãos.
+                    <span>Feito com carinho.</span>
+                </h2>
+
+                <p>
+                    Cada peça é produzida artesanalmente,
+                    cuidando de cada detalhe para entregar
+                    algo bonito, delicado e especial.
+                </p>
+
+                <p>
+                    Nosso catálogo reúne algumas das peças
+                    disponíveis. Gostou de alguma?
+                    É só entrar em contato.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+
+        <section class="contact" id="contato">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    FALE CONOSCO
+                </p>
+
+                <h2>
+                    Gostou de alguma peça?
+                </h2>
+
+                <p>
+                    Entre em contato pelo WhatsApp para
+                    consultar disponibilidade, modelos e valores.
+                </p>
+
+            </div>
+
+            <a
+                class="whatsapp-button"
+                href="https://wa.me/5500000000000"
+                target="_blank">
+
+                Conversar pelo WhatsApp
+
+                <span>→</span>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            ✦ Ateliê da Família
+        </div>
+
+        <p>
+            Feito à mão, com carinho.
+        </p>
+
+        <p class="copyright">
+            © 2026 Ateliê da Família
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
