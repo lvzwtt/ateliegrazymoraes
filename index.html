@@ -1,422 +1,1131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ateliê da Família</title>
+    <meta name="description"
+        content="Peças artesanais feitas à mão, com carinho e delicadeza. Conheça nosso catálogo.">
 
-    <meta name="description" content="Peças artesanais feitas com carinho e delicadeza.">
+    <title>Ateliê Grazy Moraes</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
 </head>
+
 
 <body>
 
-    <!-- CABEÇALHO -->
 
-    <header class="header">
+<!-- =========================
+     CABEÇALHO
+========================= -->
 
-        <div class="logo">
-            <span class="logo-symbol">✦</span>
-            <span class="logo-name">Ateliê da Família</span>
-        </div>
+<header class="header">
 
-        <nav class="navigation">
-            <a href="#inicio">Início</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
+    <a href="#inicio" class="logo">
 
-        <button class="menu-button" onclick="toggleMenu()">
-            ☰
+        <span class="logo-symbol">✦</span>
+
+        <span class="logo-name">
+            Ateliê Grazy Moraes
+        </span>
+
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="#inicio">Início</a>
+
+        <a href="#catalogo">Catálogo</a>
+
+        <a href="#sobre">O Ateliê</a>
+
+        <a href="#inspiracoes">Inspirações</a>
+
+        <a href="#contato">Contato</a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="selection-button"
+            onclick="openSelection()">
+
+            ♡
+
+            <span id="selectionCount">0</span>
+
         </button>
 
-    </header>
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
 
 
-    <!-- MENU MOBILE -->
 
-    <div class="mobile-menu" id="mobileMenu">
+<!-- =========================
+     MENU MOBILE
+========================= -->
 
-        <a href="#inicio" onclick="closeMenu()">Início</a>
-        <a href="#catalogo" onclick="closeMenu()">Catálogo</a>
-        <a href="#sobre" onclick="closeMenu()">Sobre</a>
-        <a href="#contato" onclick="closeMenu()">Contato</a>
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#inicio" onclick="closeMenu()">
+        Início
+    </a>
+
+    <a href="#catalogo" onclick="closeMenu()">
+        Catálogo
+    </a>
+
+    <a href="#sobre" onclick="closeMenu()">
+        O Ateliê
+    </a>
+
+    <a href="#inspiracoes" onclick="closeMenu()">
+        Inspirações
+    </a>
+
+    <a href="#contato" onclick="closeMenu()">
+        Contato
+    </a>
+
+    <button onclick="openSelection(); closeMenu()">
+        ♡ Minha seleção
+        <span id="mobileSelectionCount">0</span>
+    </button>
+
+</div>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="hero" id="inicio">
+
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            FEITO À MÃO • COM CARINHO
+        </p>
+
+
+        <h1>
+
+            Pequenos detalhes
+            <span>fazem toda diferença.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Peças artesanais feitas com cuidado,
+            delicadeza e muito carinho para deixar
+            sua casa ainda mais especial.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#catalogo"
+                class="button primary">
+
+                Ver catálogo
+
+            </a>
+
+
+            <a
+                href="https://wa.me/5519974185281"
+                target="_blank"
+                class="button secondary">
+
+                Falar conosco
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-details">
+
+            <span>✦ Produção artesanal</span>
+
+            <span>✦ Peças especiais</span>
+
+            <span>✦ Consulte disponibilidade</span>
+
+        </div>
 
     </div>
 
 
-    <!-- INÍCIO -->
 
-    <main>
+    <div class="hero-visual">
 
-        <section class="hero" id="inicio">
+        <div class="hero-frame">
 
-            <div class="hero-content">
+            <div class="hero-image">
 
-                <p class="eyebrow">FEITO À MÃO • COM CARINHO</p>
+                <div class="image-text">
 
-                <h1>
-                    Detalhes que tornam
-                    <span>cada momento especial.</span>
-                </h1>
+                    <span>Seu produto aqui</span>
 
-                <p class="hero-description">
-                    Peças artesanais feitas com cuidado, delicadeza
-                    e muito carinho para deixar sua casa ainda mais bonita.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#catalogo" class="button primary">
-                        Ver catálogo
-                    </a>
-
-                    <a href="#contato" class="button secondary">
-                        Falar conosco
-                    </a>
+                    <small>
+                        Foto da coleção
+                    </small>
 
                 </div>
 
             </div>
 
-            <div class="hero-decoration">
+        </div>
 
-                <div class="hero-card">
+    </div>
 
-                    <div class="fabric-placeholder">
-                        <span>Foto da coleção</span>
-                    </div>
+</section>
 
-                </div>
+
+
+<!-- =========================
+     DESTAQUES
+========================= -->
+
+<section class="highlights">
+
+    <div>
+
+        <span>✦</span>
+
+        <h3>
+            Artesanal
+        </h3>
+
+        <p>
+            Cada peça recebe atenção
+            especial em cada detalhe.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <span>❋</span>
+
+        <h3>
+            Delicadeza
+        </h3>
+
+        <p>
+            Tecidos e estampas escolhidos
+            para criar peças encantadoras.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <span>♡</span>
+
+        <h3>
+            Feito para você
+        </h3>
+
+        <p>
+            Consulte opções e possibilidades
+            diretamente com o ateliê.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CATÁLOGO
+========================= -->
+
+<section class="catalog" id="catalogo">
+
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            NOSSO CATÁLOGO
+        </p>
+
+        <h2>
+            Peças feitas para você
+        </h2>
+
+        <p>
+            Explore nossas peças e selecione
+            aquelas que despertaram seu interesse.
+        </p>
+
+    </div>
+
+
+
+    <!-- FILTROS -->
+
+    <div class="categories">
+
+        <button
+            class="category active"
+            data-category="Todos"
+            onclick="filterProducts('Todos', this)">
+
+            Todos
+
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Guardanapos"
+            onclick="filterProducts('Guardanapos', this)">
+
+            Guardanapos
+
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Jogos Americanos"
+            onclick="filterProducts('Jogos Americanos', this)">
+
+            Jogos americanos
+
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Toalhas"
+            onclick="filterProducts('Toalhas', this)">
+
+            Toalhas
+
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Kits"
+            onclick="filterProducts('Kits', this)">
+
+            Kits
+
+        </button>
+
+
+        <button
+            class="category"
+            data-category="Outros"
+            onclick="filterProducts('Outros', this)">
+
+            Outros
+
+        </button>
+
+    </div>
+
+
+
+    <!-- PRODUTOS -->
+
+    <div
+        class="products"
+        id="products">
+
+    </div>
+
+
+
+    <div class="catalog-help">
+
+        <p>
+            Não encontrou o que procura?
+        </p>
+
+        <a
+            href="https://wa.me/5519974185281?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20do%20ateliê."
+            target="_blank">
+
+            Fale conosco pelo WhatsApp →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COMO FUNCIONA
+========================= -->
+
+<section class="how-it-works">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            COMO FUNCIONA
+        </p>
+
+        <h2>
+            Escolher ficou fácil.
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <span class="step-number">
+                01
+            </span>
+
+            <h3>
+                Escolha sua peça
+            </h3>
+
+            <p>
+                Explore o catálogo e encontre
+                os produtos que mais combinam
+                com você.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">
+                02
+            </span>
+
+            <h3>
+                Faça sua seleção
+            </h3>
+
+            <p>
+                Clique em "Tenho interesse" para
+                guardar os produtos que você gostou.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">
+                03
+            </span>
+
+            <h3>
+                Envie pelo WhatsApp
+            </h3>
+
+            <p>
+                Envie sua seleção de uma vez
+                diretamente para o ateliê.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <span class="step-number">
+                04
+            </span>
+
+            <h3>
+                Combine seu pedido
+            </h3>
+
+            <p>
+                Consulte valores, disponibilidade,
+                estampas e possibilidades.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section class="about" id="sobre">
+
+
+    <div class="about-visual">
+
+        <div class="about-photo">
+
+            <div class="image-text">
+
+                <span>
+                    Foto do ateliê
+                </span>
+
+                <small>
+                    Coloque uma foto aqui
+                </small>
 
             </div>
 
-        </section>
+        </div>
 
+    </div>
 
-        <!-- CATÁLOGO -->
 
-        <section class="catalog" id="catalogo">
 
-            <div class="section-heading">
+    <div class="about-content">
 
-                <p class="eyebrow">NOSSO CATÁLOGO</p>
+        <p class="eyebrow">
+            SOBRE O ATELIÊ
+        </p>
 
-                <h2>
-                    Peças feitas para você
-                </h2>
+        <h2>
 
-                <p>
-                    Escolha uma peça que chamou sua atenção
-                    e entre em contato para saber mais.
-                </p>
+            Feito com as mãos.
+            <span>Feito com carinho.</span>
 
-            </div>
+        </h2>
 
+        <p>
 
-            <div class="categories">
+            Cada peça nasce de um processo
+            artesanal, pensado para valorizar
+            os pequenos detalhes.
 
-                <button class="category active">
-                    Todos
-                </button>
+        </p>
 
-                <button class="category">
-                    Guardanapos
-                </button>
+        <p>
 
-                <button class="category">
-                    Jogos americanos
-                </button>
+            Da escolha do tecido ao acabamento,
+            tudo é preparado com cuidado para
+            criar peças bonitas, delicadas e
+            especiais.
 
-                <button class="category">
-                    Outros
-                </button>
+        </p>
 
-            </div>
+        <p>
 
+            Nosso catálogo apresenta algumas
+            das peças disponíveis. Gostou de
+            alguma? Entre em contato para
+            conversar com a gente.
 
-            <div class="products">
+        </p>
 
 
-                <!-- PRODUTO 1 -->
+        <a
+            href="https://wa.me/5519974185281?text=Olá!%20Conheci%20o%20Ateliê%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20o%20trabalho."
+            target="_blank"
+            class="text-button">
 
-                <article class="product-card">
+            Conheça nosso trabalho →
 
-                    <div class="product-image">
-                        <div class="image-placeholder">
-                            Foto do produto
-                        </div>
+        </a>
 
-                        <span class="product-tag">
-                            Destaque
-                        </span>
-                    </div>
+    </div>
 
-                    <div class="product-info">
+</section>
 
-                        <p class="product-category">
-                            Guardanapos
-                        </p>
 
-                        <h3>
-                            Guardanapo Floral
-                        </h3>
 
-                        <p class="product-description">
-                            Guardanapo de tecido com estampa floral
-                            delicada, perfeito para compor mesas especiais.
-                        </p>
+<!-- =========================
+     PERSONALIZAÇÃO
+========================= -->
 
-                        <button
-                            class="interest-button"
-                            onclick="interest('Guardanapo Floral')">
+<section class="customization">
 
-                            Tenho interesse
 
-                            <span>→</span>
+    <div class="customization-content">
 
-                        </button>
+        <p class="eyebrow">
+            PERSONALIZAÇÃO
+        </p>
 
-                    </div>
+        <h2>
+            Quer algo só seu?
+        </h2>
 
-                </article>
+        <p>
 
+            Algumas peças podem ser produzidas
+            de acordo com suas preferências.
+            Consulte opções de tecidos, estampas,
+            tamanhos e composições.
 
-                <!-- PRODUTO 2 -->
+        </p>
 
-                <article class="product-card">
 
-                    <div class="product-image">
+        <a
+            href="https://wa.me/5519974185281?text=Olá!%20Gostaria%20de%20saber%20sobre%20as%20opções%20de%20personalização."
+            target="_blank"
+            class="button primary">
 
-                        <div class="image-placeholder">
-                            Foto do produto
-                        </div>
+            Falar sobre personalização
 
-                    </div>
+        </a>
 
-                    <div class="product-info">
+    </div>
 
-                        <p class="product-category">
-                            Guardanapos
-                        </p>
 
-                        <h3>
-                            Guardanapo Xadrez
-                        </h3>
+    <div class="customization-symbol">
 
-                        <p class="product-description">
-                            Modelo clássico e delicado para deixar
-                            a mesa charmosa em qualquer ocasião.
-                        </p>
+        ✂
 
-                        <button
-                            class="interest-button"
-                            onclick="interest('Guardanapo Xadrez')">
+    </div>
 
-                            Tenho interesse
+</section>
 
-                            <span>→</span>
 
-                        </button>
 
-                    </div>
+<!-- =========================
+     KITS
+========================= -->
 
-                </article>
+<section class="kits">
 
 
-                <!-- PRODUTO 3 -->
+    <div class="section-heading">
 
-                <article class="product-card">
+        <p class="eyebrow">
+            PARA PRESENTEAR
+        </p>
 
-                    <div class="product-image">
+        <h2>
+            Pequenos presentes,
+            grandes carinhos.
+        </h2>
 
-                        <div class="image-placeholder">
-                            Foto do produto
-                        </div>
+        <p>
+            Consulte também nossas possibilidades
+            de kits e combinações especiais.
+        </p>
 
-                    </div>
+    </div>
 
-                    <div class="product-info">
 
-                        <p class="product-category">
-                            Jogos americanos
-                        </p>
+    <div class="kit-grid">
 
-                        <h3>
-                            Jogo Americano Natural
-                        </h3>
 
-                        <p class="product-description">
-                            Uma peça elegante e versátil para
-                            compor sua mesa de forma aconchegante.
-                        </p>
+        <div class="kit-card">
 
-                        <button
-                            class="interest-button"
-                            onclick="interest('Jogo Americano Natural')">
+            <span class="kit-icon">
+                ☕
+            </span>
 
-                            Tenho interesse
+            <h3>
+                Kit Café
+            </h3>
 
-                            <span>→</span>
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUTO 4 -->
-
-                <article class="product-card">
-
-                    <div class="product-image">
-
-                        <div class="image-placeholder">
-                            Foto do produto
-                        </div>
-
-                    </div>
-
-                    <div class="product-info">
-
-                        <p class="product-category">
-                            Outros
-                        </p>
-
-                        <h3>
-                            Peça Artesanal
-                        </h3>
-
-                        <p class="product-description">
-                            Produzida artesanalmente com atenção
-                            aos pequenos detalhes.
-                        </p>
-
-                        <button
-                            class="interest-button"
-                            onclick="interest('Peça Artesanal')">
-
-                            Tenho interesse
-
-                            <span>→</span>
-
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- SOBRE -->
-
-        <section class="about" id="sobre">
-
-            <div class="about-decoration">
-
-                <div class="about-circle">
-                    ✦
-                </div>
-
-            </div>
-
-            <div class="about-content">
-
-                <p class="eyebrow">
-                    SOBRE O ATELIÊ
-                </p>
-
-                <h2>
-                    Feito com as mãos.
-                    <span>Feito com carinho.</span>
-                </h2>
-
-                <p>
-                    Cada peça é produzida artesanalmente,
-                    cuidando de cada detalhe para entregar
-                    algo bonito, delicado e especial.
-                </p>
-
-                <p>
-                    Nosso catálogo reúne algumas das peças
-                    disponíveis. Gostou de alguma?
-                    É só entrar em contato.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTATO -->
-
-        <section class="contact" id="contato">
-
-            <div class="section-heading">
-
-                <p class="eyebrow">
-                    FALE CONOSCO
-                </p>
-
-                <h2>
-                    Gostou de alguma peça?
-                </h2>
-
-                <p>
-                    Entre em contato pelo WhatsApp para
-                    consultar disponibilidade, modelos e valores.
-                </p>
-
-            </div>
+            <p>
+                Uma combinação delicada
+                para deixar o café ainda
+                mais especial.
+            </p>
 
             <a
-                class="whatsapp-button"
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5519974185281?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20kits%20para%20café."
                 target="_blank">
 
-                Conversar pelo WhatsApp
-
-                <span>→</span>
+                Tenho interesse →
 
             </a>
 
-        </section>
-
-    </main>
-
-
-    <!-- RODAPÉ -->
-
-    <footer class="footer">
-
-        <div class="footer-logo">
-            ✦ Ateliê da Família
         </div>
 
+
+
+        <div class="kit-card featured-kit">
+
+            <span class="kit-icon">
+                ✦
+            </span>
+
+            <h3>
+                Kit Mesa Posta
+            </h3>
+
+            <p>
+                Peças combinando para
+                compor uma mesa bonita
+                e acolhedora.
+            </p>
+
+            <a
+                href="https://wa.me/5519974185281?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Kit%20Mesa%20Posta."
+                target="_blank">
+
+                Tenho interesse →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="kit-card">
+
+            <span class="kit-icon">
+                ♡
+            </span>
+
+            <h3>
+                Kit Presente
+            </h3>
+
+            <p>
+                Uma seleção preparada
+                para transformar carinho
+                em presente.
+            </p>
+
+            <a
+                href="https://wa.me/5519974185281?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20kits%20para%20presente."
+                target="_blank">
+
+                Tenho interesse →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INSPIRAÇÕES
+========================= -->
+
+<section class="inspirations" id="inspiracoes">
+
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            INSPIRAÇÕES
+        </p>
+
+        <h2>
+            Veja nossas peças
+            em momentos especiais.
+        </h2>
+
         <p>
-            Feito à mão, com carinho.
+            Em breve, você poderá encontrar
+            aqui fotos das peças em diferentes
+            composições e ambientes.
         </p>
 
-        <p class="copyright">
-            © 2026 Ateliê da Família
+    </div>
+
+
+    <div class="inspiration-grid">
+
+
+        <div class="inspiration-photo large">
+
+            <div class="image-text">
+                Mesa posta
+            </div>
+
+        </div>
+
+
+        <div class="inspiration-photo">
+
+            <div class="image-text">
+                Café da manhã
+            </div>
+
+        </div>
+
+
+        <div class="inspiration-photo">
+
+            <div class="image-text">
+                Detalhes
+            </div>
+
+        </div>
+
+
+        <div class="inspiration-photo">
+
+            <div class="image-text">
+                Feito à mão
+            </div>
+
+        </div>
+
+
+        <div class="inspiration-photo">
+
+            <div class="image-text">
+                Para presentear
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DEPOIMENTOS
+========================= -->
+
+<section class="testimonials">
+
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            QUEM JÁ CONHECE
         </p>
 
-    </footer>
+        <h2>
+            Carinho que chega até você.
+        </h2>
+
+        <p>
+            Este espaço poderá receber
+            futuramente os depoimentos
+            das clientes do ateliê.
+        </p>
+
+    </div>
 
 
-    <script src="script.js"></script>
+    <div class="testimonial-placeholder">
+
+        <span>
+            ★★★★★
+        </span>
+
+        <p>
+            "Seu depoimento pode aparecer aqui."
+        </p>
+
+        <small>
+            — Cliente do Ateliê
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<section class="social-section">
+
+
+    <div>
+
+        <p class="eyebrow">
+            ACOMPANHE O ATELIÊ
+        </p>
+
+        <h2>
+            Mais do nosso trabalho.
+        </h2>
+
+        <p>
+            Acompanhe novidades, novas peças
+            e bastidores pelas nossas redes.
+        </p>
+
+    </div>
+
+
+    <!-- TROCAR PELO INSTAGRAM REAL -->
+
+    <a
+        href="https://instagram.com/"
+        target="_blank"
+        class="instagram-button">
+
+        @ateliegrazymoraes
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section class="contact" id="contato">
+
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            FALE CONOSCO
+        </p>
+
+        <h2>
+            Encontrou sua peça favorita?
+        </h2>
+
+        <p>
+            Estamos esperando sua mensagem.
+            Consulte valores, disponibilidade,
+            modelos e personalizações.
+        </p>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/5519974185281?text=Olá!%20Conheci%20o%20Ateliê%20pelo%20catálogo%20e%20gostaria%20de%20saber%20mais."
+        target="_blank"
+        class="whatsapp-button">
+
+        <span>
+            ♡
+        </span>
+
+        Conversar pelo WhatsApp
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+
+    <p class="contact-number">
+        +55 (19) 97418-5281
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer class="footer">
+
+
+    <div class="footer-main">
+
+        <div>
+
+            <div class="footer-logo">
+
+                <span>✦</span>
+
+                Ateliê Grazy Moraes
+
+            </div>
+
+            <p>
+                Feito à mão, com carinho.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#catalogo">
+                Catálogo
+            </a>
+
+            <a href="#sobre">
+                O Ateliê
+            </a>
+
+            <a href="#contato">
+                Contato
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <span>
+                Fale conosco
+            </span>
+
+            <a
+                href="https://wa.me/5519974185281"
+                target="_blank">
+
+                WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Ateliê Grazy Moraes
+        </p>
+
+        <p>
+            Produzido com carinho ♡
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     MODAL DA SELEÇÃO
+========================= -->
+
+<div
+    class="selection-overlay"
+    id="selectionOverlay"
+    onclick="closeSelectionOutside(event)">
+
+
+    <div class="selection-modal">
+
+
+        <button
+            class="close-modal"
+            onclick="closeSelection()">
+
+            ×
+
+        </button>
+
+
+        <p class="eyebrow">
+            SUA SELEÇÃO
+        </p>
+
+
+        <h2>
+            Produtos que você gostou
+        </h2>
+
+
+        <div
+            class="selected-products"
+            id="selectedProducts">
+
+        </div>
+
+
+        <div
+            class="empty-selection"
+            id="emptySelection">
+
+            <span>
+                ♡
+            </span>
+
+            <p>
+                Sua seleção está vazia.
+            </p>
+
+            <small>
+                Clique em "Tenho interesse"
+                nos produtos que você gostar.
+            </small>
+
+        </div>
+
+
+        <button
+            class="send-selection"
+            id="sendSelection"
+            onclick="sendSelection()">
+
+            Enviar seleção pelo WhatsApp →
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
