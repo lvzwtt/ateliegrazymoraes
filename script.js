@@ -1,20 +1,11 @@
 /* =========================================
-   CONFIGURAÇÃO DOS CONTATOS
+   CONTATOS
 ========================================= */
 
-/*
-   NÚMERO EXCLUSIVO PARA ENCOMENDAS / PRODUTOS
-*/
-
+// WhatsApp para ENCOMENDAS / PRODUTOS
 const WHATSAPP = "5519974185281";
 
-
-/*
-   NÚMERO EXCLUSIVO PARA SUPORTE DO SITE
-
-   Este número NÃO é usado para produtos.
-*/
-
+// WhatsApp EXCLUSIVO para SUPORTE DO SITE
 const SUPPORT_WHATSAPP = "551999000297";
 
 
@@ -120,20 +111,16 @@ let selectedProducts = [];
 
 function renderProducts(category = "Todos") {
 
-    const container =
-        document.getElementById("products");
+    const container = document.getElementById("products");
 
     container.innerHTML = "";
 
 
     const filteredProducts =
         category === "Todos"
-
             ? products
-
             : products.filter(
-                product =>
-                    product.category === category
+                product => product.category === category
             );
 
 
@@ -147,8 +134,7 @@ function renderProducts(category = "Todos") {
             document.createElement("article");
 
 
-        card.className =
-            "product-card";
+        card.className = "product-card";
 
 
         let imageHTML;
@@ -187,11 +173,9 @@ function renderProducts(category = "Todos") {
 
                 ${
                     product.featured
-
                         ? `<span class="product-tag">
                                 Destaque
                            </span>`
-
                         : ""
                 }
 
@@ -220,9 +204,7 @@ function renderProducts(category = "Todos") {
 
                     ${
                         isSelected
-
                             ? "✓ Selecionado"
-
                             : "Tenho interesse"
                     }
 
@@ -243,7 +225,7 @@ function renderProducts(category = "Todos") {
 
 
 /* =========================================
-   FILTROS
+   FILTRAR CATEGORIAS
 ========================================= */
 
 function filterProducts(category, button) {
@@ -275,8 +257,7 @@ function toggleProduct(id) {
 
         selectedProducts =
             selectedProducts.filter(
-                productId =>
-                    productId !== id
+                productId => productId !== id
             );
 
     } else {
@@ -293,7 +274,7 @@ function toggleProduct(id) {
         document
             .querySelector(".category.active")
             ?.dataset.category
-            || "Todos";
+        || "Todos";
 
 
     renderProducts(activeCategory);
@@ -302,7 +283,7 @@ function toggleProduct(id) {
 
 
 /* =========================================
-   CONTADOR
+   ATUALIZAR CONTADOR
 ========================================= */
 
 function updateSelectionCount() {
