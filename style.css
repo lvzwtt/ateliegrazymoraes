@@ -663,12 +663,7 @@ a {
     transition: .3s;
 }
 
-.interest-button:hover {
-    background: #765a43;
-
-    color: white;
-}
-
+.interest-button:hover,
 .interest-button.selected {
     background: #765a43;
 
@@ -1226,9 +1221,9 @@ a {
 .footer-main {
     display: grid;
 
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
 
-    gap: 50px;
+    gap: 45px;
 
     padding-bottom: 40px;
 }
@@ -1251,30 +1246,7 @@ a {
     font-size: 10px;
 }
 
-.footer-links,
-.footer-contact {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-}
-
-.footer-links a,
-.footer-contact a {
-    color: #cbbdaf;
-
-    font-size: 10px;
-
-    transition: .3s;
-}
-
-.footer-links a:hover,
-.footer-contact a:hover {
-    color: white;
-}
-
-.footer-contact span {
+.footer-title {
     color: #a99178;
 
     font-size: 9px;
@@ -1284,19 +1256,41 @@ a {
     text-transform: uppercase;
 }
 
-.footer-bottom {
-    padding-top: 20px;
-
-    border-top: 1px solid rgba(255,255,255,.1);
-
+.footer-links,
+.footer-contact,
+.footer-support {
     display: flex;
 
-    justify-content: space-between;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-support a {
+    color: #cbbdaf;
+
+    font-size: 10px;
+
+    transition: .3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-support a:hover {
+    color: white;
+}
+
+.footer-phone {
+    color: #9f8c7a;
+
+    font-size: 9px;
 }
 
 
 /* =========================
-   MODAL
+   SELEÇÃO / MODAL
 ========================= */
 
 .selection-overlay {
@@ -1460,7 +1454,7 @@ a {
 
 
 /* =========================
-   RESPONSIVIDADE
+   FOOTER RESPONSIVO
 ========================= */
 
 @media (max-width: 1100px) {
@@ -1479,6 +1473,14 @@ a {
 
     .step:nth-child(2) {
         border-right: none;
+    }
+
+    .footer-main {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .footer-support {
+        grid-column: 2;
     }
 
 }
@@ -1639,9 +1641,13 @@ a {
     }
 
     .footer-main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
-        gap: 30px;
+        gap: 35px;
+    }
+
+    .footer-support {
+        grid-column: auto;
     }
 
     .footer-bottom {
@@ -1669,6 +1675,10 @@ a {
 
     .product-image {
         height: 310px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
     }
 
 }
