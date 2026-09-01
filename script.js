@@ -1,25 +1,26 @@
 /* =========================================
-   CONFIGURAÇÃO DO WHATSAPP
+   CONFIGURAÇÃO DOS CONTATOS
 ========================================= */
 
+/*
+   NÚMERO EXCLUSIVO PARA ENCOMENDAS / PRODUTOS
+*/
+
 const WHATSAPP = "5519974185281";
+
+
+/*
+   NÚMERO EXCLUSIVO PARA SUPORTE DO SITE
+
+   Este número NÃO é usado para produtos.
+*/
+
+const SUPPORT_WHATSAPP = "551999000297";
 
 
 /* =========================================
    PRODUTOS
 ========================================= */
-
-/*
-   IMPORTANTE:
-
-   Quando tivermos as fotos reais, vamos
-   substituir os campos "image" pelas imagens.
-
-   Exemplo:
-
-   image: "images/guardanapo-floral.jpg"
-
-*/
 
 const products = [
 
@@ -114,7 +115,7 @@ let selectedProducts = [];
 
 
 /* =========================================
-   CARREGAR PRODUTOS
+   RENDERIZAR PRODUTOS
 ========================================= */
 
 function renderProducts(category = "Todos") {
@@ -145,7 +146,9 @@ function renderProducts(category = "Todos") {
         const card =
             document.createElement("article");
 
-        card.className = "product-card";
+
+        card.className =
+            "product-card";
 
 
         let imageHTML;
@@ -272,7 +275,8 @@ function toggleProduct(id) {
 
         selectedProducts =
             selectedProducts.filter(
-                productId => productId !== id
+                productId =>
+                    productId !== id
             );
 
     } else {
@@ -288,7 +292,8 @@ function toggleProduct(id) {
     const activeCategory =
         document
             .querySelector(".category.active")
-            ?.dataset.category || "Todos";
+            ?.dataset.category
+            || "Todos";
 
 
     renderProducts(activeCategory);
@@ -441,7 +446,10 @@ function renderSelection() {
 
             <button
                 class="remove-item"
-                onclick="toggleProduct(${product.id}); renderSelection();"
+                onclick="
+                    toggleProduct(${product.id});
+                    renderSelection();
+                "
             >
 
                 Remover
@@ -479,6 +487,7 @@ function sendSelection() {
                     item => item.id === id
                 );
 
+
             return `• ${product.name}`;
 
         });
@@ -486,19 +495,19 @@ function sendSelection() {
 
     const message =
 
-        "Olá! Vi o catálogo do Ateliê Grazy Moraes e gostaria de saber mais sobre estas peças:%0A%0A"
+        "Olá! Vi o catálogo do Ateliê Grazy Moraes e gostaria de saber mais sobre estas peças:\n\n"
 
         +
 
-        selectedNames.join("%0A")
+        selectedNames.join("\n")
 
         +
 
-        "%0A%0AGostaria de saber os valores e a disponibilidade. 🤎";
+        "\n\nGostaria de saber os valores e a disponibilidade. 🤎";
 
 
     const url =
-        `https://wa.me/${WHATSAPP}?text=${message}`;
+        `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
 
 
     window.open(url, "_blank");
