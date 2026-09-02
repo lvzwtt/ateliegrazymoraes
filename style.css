@@ -1948,3 +1948,78 @@ a {
     }
 
 }
+/* =========================
+   ENVIO PARA TODO O BRASIL
+========================= */
+
+.shipping {
+    padding: 55px 8%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    background: #f8f4ed;
+
+    border-top: 1px solid #e8dfd2;
+    border-bottom: 1px solid #e8dfd2;
+
+    text-align: center;
+}
+
+.shipping-icon,
+.shipping-symbol {
+    color: #a17d5c;
+
+    font-size: 25px;
+}
+
+.shipping-content {
+    max-width: 650px;
+}
+
+.shipping-content .eyebrow {
+    margin-bottom: 8px;
+}
+
+.shipping-content h2 {
+    margin-bottom: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #5d4837;
+
+    font-size: 34px;
+
+    font-weight: 600;
+}
+
+.shipping-content p:last-child {
+    color: #806e5d;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+
+    .shipping {
+        padding: 45px 7%;
+
+        gap: 15px;
+    }
+
+    .shipping-icon,
+    .shipping-symbol {
+        font-size: 18px;
+    }
+
+    .shipping-content h2 {
+        font-size: 28px;
+    }
+
+}
